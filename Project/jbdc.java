@@ -3,9 +3,9 @@ import java.sql.*;
 public class jbdc
 {
 
- static final String DB_URL = "jdbc:mysql://johnny.heliohost.org/trialnly_rms";
+ static final String DB_URL = "jdbc:mysql://alpha.hostmydreams.net";
               static final String USER = "trialnly";
-             static final String PASS = "Trialnly_1234";
+             static final String PASS = "Wuff_1234";
             
     public static void main(String[] args) 
     {
