@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.Icon;
 
 public class userUI extends JFrame  implements ActionListener
 {
@@ -13,15 +14,16 @@ public class userUI extends JFrame  implements ActionListener
     private JPanel displayPanel = new JPanel(null);
     private JLabel menu      = new JLabel("Menu");
     private JLabel picIcon    = new JLabel();
-    private JButton btnProfile  = new JButton("Profile");
-    private JButton btnCoach    = new JButton("Coach");
-    private JButton btnTicket    = new JButton("Ticket");
-    private JButton btnLogout    = new JButton("Logout");
+    private JButton btnProfile  = new JButton(new ImageIcon("rsc/profile.png"));
+	
+    private JButton btnCoach    = new JButton(new ImageIcon("rsc/coach.png"));
+    private JButton btnTicket    = new JButton(new ImageIcon("rsc/ticket.png"));
+    private JButton btnLogout    = new JButton(new ImageIcon("rsc/logout.png"));
 
     //For profile panel;
 
-    private JButton btnEdit = new JButton("Edit");
-    private JButton btnUpdate = new JButton("Update");
+    private JButton btnEdit = new JButton(new ImageIcon("rsc/edit.png"));
+    private JButton btnUpdate = new JButton(new ImageIcon("rsc/update.png"));
 
     private JLabel nameLabel = new JLabel("Name : ");
     private JLabel mnoLabel = new JLabel("Mobile no : ");
@@ -77,10 +79,16 @@ public class userUI extends JFrame  implements ActionListener
 
         //addiing edit and update button
         btnEdit.setBounds(260, 460, 85, 35);
+		btnEdit.setBorder(BorderFactory.createEmptyBorder());
+		btnEdit.setContentAreaFilled(false);
+		
         btnEdit.addActionListener(this);
         displayPanel.add(btnEdit);
 
         btnUpdate.setBounds(355, 460, 90, 35);
+		btnUpdate.setBorder(BorderFactory.createEmptyBorder());
+		btnUpdate.setContentAreaFilled(false);
+		
         btnUpdate.addActionListener(this);
         displayPanel.add(btnUpdate);
 
@@ -132,18 +140,33 @@ public class userUI extends JFrame  implements ActionListener
         displayPanel.setBounds(170, 0, 690, 570);
         //displayPanel.setBackground(new Color(160,205,50));
         //menu.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
-
+		
+		
+		
         menuPanel.add(btnProfile);
+		btnProfile.setBorder(BorderFactory.createEmptyBorder());
+		btnProfile.setContentAreaFilled(false);
         menuPanel.add(btnCoach);
         menuPanel.add(btnTicket);
         menuPanel.add(btnLogout);
         //Settings of JButton
       
       
-         btnProfile.setBounds(25, 25, 90, 45);
+		btnProfile.setBounds(25, 25, 90, 45);
+		btnProfile.setBorder(BorderFactory.createEmptyBorder());
+		btnProfile.setContentAreaFilled(false);
+		
         btnCoach.setBounds (25, 95, 90, 45);
+		btnCoach.setBorder(BorderFactory.createEmptyBorder());
+        btnCoach.setContentAreaFilled(false);
+		
         btnTicket.setBounds(25, 160, 90, 45);
+		btnTicket.setBorder(BorderFactory.createEmptyBorder());
+		btnTicket.setContentAreaFilled(false);
+	  
         btnLogout.setBounds(30, 410, 90, 45);
+		btnLogout.setBorder(BorderFactory.createEmptyBorder());
+		btnLogout.setContentAreaFilled(false);
 
         add(menuPanel);
     }
