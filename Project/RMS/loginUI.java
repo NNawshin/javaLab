@@ -144,23 +144,27 @@ public class loginUI extends JFrame implements ActionListener
 
 
       //login JButton
-      btnLogin = new JButton("Login");
-      btnRegister = new JButton("Register");
+      btnLogin = new JButton(new ImageIcon("rsc/login.png"));
+      btnRegister = new JButton(new ImageIcon("rsc/register.png"));
 
       btnLogin.addActionListener(this);
       btnRegister.addActionListener(this);
 
 
-      btnLogin.setFont(new Font("sansserif",Font.ITALIC,18));
-      btnLogin.setBounds(140,285,130,30);
+      //btnLogin.setFont(new Font("sansserif",Font.ITALIC,18));
+      btnLogin.setBounds(140,285,130,40);
+	  btnLogin.setBorder(BorderFactory.createEmptyBorder());
+      btnLogin.setContentAreaFilled(false);
 
       //the Text in between two JButton
       JLabel newuser = new JLabel("New user ?");
       newuser.setForeground(Color.WHITE);
       newuser.setFont(new Font("sansserif",Font.ITALIC,13));
       newuser.setBounds(175,340,75,25);
-      btnRegister.setFont(new Font("sansserif",Font.ITALIC,18));
-      btnRegister.setBounds(140,380,130,30);
+      //btnRegister.setFont(new Font("sansserif",Font.ITALIC,18));
+      btnRegister.setBounds(140,380,140,60);
+	  btnRegister.setBorder(BorderFactory.createEmptyBorder());
+      btnRegister.setContentAreaFilled(false);
 
 
       rms.setBounds(30, 195, 300, 220);
